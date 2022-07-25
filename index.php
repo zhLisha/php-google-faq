@@ -64,10 +64,8 @@
             </div>
             <nav>
                 <ul class="flex">
+                    <!-- Stamp NavList Key -->
                     <?php foreach($navList as $key => $actions) { ?>
-
-                        <!-- <?php var_dump($key) ?> -->
-
                         <li>
                             <a href="#">
                                 <?php echo $key; ?>
@@ -79,5 +77,33 @@
             </nav>
         </div>
     </header>
+
+    <main>
+        <div class="container">
+            <ul>
+                <!-- Stamp each Q&A -->
+                <?php foreach($navList['Domande frequenti'] as $actions) { ?>
+                    <li>
+                        <div class="question">
+                            <h3>
+                                <?php echo $actions['question'] ?>
+                            </h3>
+                        </div>
+                        <div class="answer">
+                            <!-- Divide each paragraph after '.' -->
+                            <?php foreach (explode(".", $actions['answer']) as $value) { ?>
+                                <?php if(strlen($value) > 1) { ?>
+                                    <p>
+                                        <?php echo "$value. " ?>
+                                    </p>
+                                <? } ?>
+                            <?php } ?>  
+                        </div>
+                    </li>
+
+                <?php } ?>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>

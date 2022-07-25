@@ -70,3 +70,17 @@ nav {
     font-size: 28px;
     padding-left: 20px;
 }
+
+
+
+/* Main */
+.answer p{
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+h3 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
